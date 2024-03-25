@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Potato Blight Classifier</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="#">
+</head>
+<body>
+    <div class="container">
+        <h1>Potato Blight Classifier</h1>
+        <form id="upload-form" enctype="multipart/form-data">
+            <label for="file-input" class="file-label">Select an image of a potato plant:</label>
+            <input type="file" id="file-input" accept="image/*" required>
+            <button type="submit">Classify</button>
+            <progress id="progress-bar" value="0" max="100" style="display: none;"></progress>
+        </form>
+        <div id="image-container" class="image-container"></div>
+        <div id="result" class="result"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
