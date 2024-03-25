@@ -8,17 +8,15 @@ import tensorflow as tf
 import requests
 
 app = FastAPI()
+headers = ("Access-Control-Allow-Origin: *"),
 
-origins = [
-    "http://localhost",
-    "http://localhost:3000",
-]
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=origins,
+    allow_origins=["*"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
+    
 )
 
 endpoint = "http://localhost:8501/v1/models/potatoes_model/versions/1:predict"
