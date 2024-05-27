@@ -20,7 +20,7 @@ form.addEventListener('submit', async (event) => {
             // Adding progress event to show upload progress
             onUploadProgress: (progressEvent) => {
                 if (progressEvent.lengthComputable) {
-                    const percentCompleted = Math.round((progressEvent.loaded / progressEvent.total) * 100);
+                    const percentCompleted = ((progressEvent.loaded / progressEvent.total)*100 );
                     progressBar.value = percentCompleted;
                 }
             }
